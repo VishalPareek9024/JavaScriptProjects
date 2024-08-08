@@ -22,7 +22,13 @@ submitbtn.addEventListener('click', () => {
         let currentdatenew = curentdate.getDate()
         let currentyear = curentdate.getFullYear();
         console.log(currentmonth," == ",currentdatenew," == ",currentyear)
-        if(agearray[0]>currentyear || agearray[1] > currentmonth && agearray[2]> currentdatenew)
+        if(agearray[0]>currentyear)
+        {
+            alert("Please Enter Valid Date! Thanks")
+            return false;
+        }
+
+        if( agearray[1] > currentmonth && agearray[2]> currentdatenew)
         {
             alert("Please Enter Valid Date! Thanks")
             return false;
