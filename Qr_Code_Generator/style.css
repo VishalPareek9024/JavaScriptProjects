@@ -1,0 +1,77 @@
+
+
+body {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 500px;
+    padding: 20px 0px;
+    border: 2px solid white;
+    color: white;
+    font-family: sans-serif;
+    margin-top: 60px;
+}
+
+.container h1 {
+    padding-left: 20px;
+    line-height: 1;
+    /* padding-top: 10px; */
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.container .urldiv {
+    padding-left: 20px;
+}
+
+.urldiv input {
+    width: 300px;
+    padding: 8px 5px;
+}
+
+.urldiv button {
+    padding: 6px 10px;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.urldiv button:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.Thanks {
+    text-align: center;
+}
+
+.Thanks button {
+    padding: 8px 13px;
+    font-size: 16px;
+    margin-top: 13px;
+    background-color: purple;
+    color: white;
+    border: 2px solid white;
+    display: none;
+}
+
+.qrimagediv {
+    text-align: center;
+    /* margin-top: 40px; */
+}
+
+.qrimg {
+    width: 150px;
+    height: 150px;
+    /* margin-top: 40px; */
+    /* height: 0px; */
+    /* transition: 10ms; */
+}
+
+p {
+    text-align: center;
+    display: none;
+}

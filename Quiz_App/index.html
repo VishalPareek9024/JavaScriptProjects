@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz App</h1>
+        <div class="question">
+            <h2 class="ques"></h2>
+        </div>
+
+        <div class="options">
+            <p class="option1" id="phover" onclick="checkans(this)"></p>
+            <p class="option2" id="phover" onclick="checkans(this)"></p>
+            <p class="option3" id="phover" onclick="checkans(this)"></p>
+            <p class="option4" id="phover" onclick="checkans(this)"></p>
+        </div>
+
+        <div class="nextbtn">
+            <button>Next</button>
+        </div>
+    </div>
+
+    <div class="complete" style="width: 100%;height: 600px;background-color: yellow;position: absolute;top: 0;left: 0;z-index: 8;display: none;">
+    <img src="./quizcompleteloop.gif" alt="" style="width: 600px;margin: auto;display: block;margin-top: 100px;">
+    </div>
+    <h1 id="score" style="display: none;position: absolute;top: 10px;left: 10px;color: white;background-color: purple; font-size: 32px;padding: 10px 20px;border: 1px solid white; font-family: Arial, Helvetica, sans-serif;z-index: 9;"></h1>
+    <script src="./script.js"></script>
+</body>
+</html>
+

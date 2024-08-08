@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    /* background-color: blue; */
+        background: linear-gradient(to bottom right, #007BFF, #66B2FF);  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main{
+    width: 98vw;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #007BFF, #66B2FF);  
+
+}
+
+.container{
+    width: 40%;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-top: 60px;
+    height: 50%;
+}
+
+.input{
+    margin-top: 20px;
+}
+
+.container .input input{
+    width: 60%;
+    padding: 0px 10px;
+    line-height: 2.8;
+    border-radius: 10px;
+    border: none;
+}
+
+.container button{
+    padding: 0px 10px;
+    line-height: 2;
+    margin-left: 10px;
+    font-size: 19px;
+    background-color: #FF5722; /* Orange */
+    color: #FFFFFF; /* White text */
+
+    border-radius: 10px;
+    border: 2px solid gold;
+}
+
+.findage .displayage{
+    font-size: 28px;
+    font-style: italic;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.first-paragraph{
+    color: white;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.second-paragraph{
+    color: white;
+    text-align: center;
+    font-size: 17px;
+}
+
+.main-heading{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+ /* Media query for 900px to 500px */
+
+ @media screen and (min-width:642px) and (max-width:800px) {
+    body{
+        background-color: black;
+    }
+
+    .container{
+        width: 80%;
+    }
+
+    .heading{
+        font-size: 32px;
+    }
+
+    .container .input input{
+        width: 66%;
+    }
+
+    .second-paragraph{
+        margin-top: 30px;
+    }
+
+    .main-heading{
+        font-size: 32px;
+    }
+ }
+
+ 
+ @media screen and (max-width:641px) {
+    body {
+        background: linear-gradient(to bottom right, #007BFF, #66B2FF);
+      }
+
+      .heading{
+        font-size: 22px;
+        margin-top: 20px;
+      }
+
+    .main{
+        height: 500px;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    .container .input{
+        text-align: center;
+    }
+
+    .container .input input{
+        width: 100%;
+        line-height: 2.4;
+    }
+
+    .container .input button{
+        margin: auto;
+        margin-top: 20px;
+        text-align: center;
+        line-height: 1.9;
+        border: 1px solid #FFFFFF;
+        font-size: 17px;
+        border-radius: 8px;
+    }
+
+    .second-paragraph{
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .main-heading{
+        font-size: 26px;
+    }
+
+    .findage .displayage{
+        font-size: 17px;
+        font-style: italic;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+ }
