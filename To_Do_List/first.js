@@ -1,13 +1,4 @@
-let addedevents = document.getElementById("addedevents");
 let timerId = null; // To store the interval ID and prevent multiple timers
-let section = document.getElementsByTagName('section')[0];
-// window.addEventListener('load',()=>{
-//     addedevents.innerHTML = localStorage.getItem('data')
-//     // newfunction()
-//     }) 
-
-addedevents.innerHTML = localStorage.getItem('data')
-console.log(section.innerHTML)
 
 function additemfun() {
     let inputbox = document.getElementById('input');
@@ -32,55 +23,48 @@ function additemfun() {
     divcreation.classList.add('todo-item');
 
     let h2creation = document.createElement('h2');
-    h2creation.innerHTML = `<span>${input}: </span> <span>${hours} h ${minutes} m </span>`;
-    h2creation.classList.add('toditemandtime')
+    h2creation.innerText = `${input}: ${hours}h ${minutes}m`;
     divcreation.appendChild(h2creation);
 
     let twobtnsdiv = document.createElement('div');
     twobtnsdiv.classList.add('btn-container');
 
-    
+    let completebtn = document.createElement("button");
+    completebtn.innerText = "Completed";
+    completebtn.classList.add('btn');
+    completebtn.addEventListener('click', () => linethrough(divcreation));
+    twobtnsdiv.appendChild(completebtn);
+
     let startbtn = document.createElement("button");
     startbtn.innerText = "Start";
-    startbtn.classList.add('btn','button-63');
-    // startbtn.classList.add('button-63');
-
+    startbtn.classList.add('btn');
     startbtn.addEventListener('click', () => startTimeFunction(divcreation, hours, minutes));
     twobtnsdiv.appendChild(startbtn);
 
-    divcreation.appendChild(twobtnsdiv); 
+    divcreation.appendChild(twobtnsdiv);
 
     let startTimeDisplay = document.createElement('h4');
     startTimeDisplay.innerText = `${hours}h ${minutes}m 0s`;
     divcreation.appendChild(startTimeDisplay);
 
-    console.log(section.innerHTML)*
+    let addedevents = document.getElementById("addedevents");
     addedevents.appendChild(divcreation);
 
     inputbox.value = '';
     userhours.value = '';
     userminutes.value = '';
+}
 
-    // console.log(addedevents)
-    localStorage.setItem('data',addedevents.innerHTML)
-    addedevents.innerHTML = localStorage.getItem('data')
-
-    // newfunction()
-
-    console.log(addedevents)
+function linethrough(item) {
+    let heading = item.querySelector('h2');
+    heading.classList.toggle('linethrough');
 }
 
 function startTimeFunction(todoItem, hours, minutes) {
-    console.log(todoItem)
-    console.log(hours);
-    console.log(minutes);
-    
-    console.log("hello")
     if (timerId) {
         clearInterval(timerId); // Clear any existing timer
     }
 
-    console.log("Hii")
     let display = todoItem.querySelector('h4');
     let totalSeconds = (hours * 3600) + (minutes * 60);
     let remainingSeconds = totalSeconds;
@@ -96,9 +80,9 @@ function startTimeFunction(todoItem, hours, minutes) {
 
         const hrs = Math.floor(remainingSeconds / 3600);
         const mins = Math.floor((remainingSeconds % 3600) / 60);
-        const secs = remainingSeconds % 60;  
+        const secs = remainingSeconds % 60;
 
-        display.innerText = `${hrs} h ${mins} m ${secs} s`;
+        display.innerText = `${hrs}h ${mins}m ${secs}s`;
     }
 
     timerId = setInterval(updateTimer, 1000);
@@ -117,30 +101,3 @@ function datetimedisplay() {
 }
 
 setInterval(datetimedisplay, 1000);
-
-
-function newfunction()
-{
-    
-    let btn63 = document.querySelectorAll('.button-63')
-    btn63.forEach(element => {
-        element.addEventListener('click',()=>{
-            let parent = (element.parentElement).parentElement
-            let span = ((element.parentElement).previousElementSibling).querySelectorAll('span')[1]
-            console.log(span)
-            startTimeFunction(parent)
-        })})
-
-    }
-    // let completebtn = document.createElement("button");
-    // completebtn.innerText = "Completed";
-    // completebtn.classList.add('btn');
-    // completebtn.addEventListener('click', () => linethrough(divcreation));
-    // twobtnsdiv.appendChild(completebtn);
-
-    
-    
-    // function linethrough(item) {
-    //     let heading = item.querySelector('h2');
-    //     heading.classList.toggle('linethrough');
-    // }

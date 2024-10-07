@@ -1,0 +1,92 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #aee9ae;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .container{
+  width: 500px;
+  padding: 40px;
+  background-color: white;
+  /* margin: auto; */
+}
+
+.search-box{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input{
+  width: 70%;
+  display: block;
+  height: 35px;
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #aee9ae;
+}
+
+.search-box button{
+  width: 27%;
+  padding: 5px;
+  font-size: 18px;
+  background-color: #aee9ae;
+  border: none;
+  border-radius: 8px;
+  color: black;
+}
+
+.show-output{
+  width: 100%;
+  padding: 40px 0px;
+  display: none;
+}
+
+.show-output h2{
+  font-size: 32px;
+  margin-block: 10px;
+}
+
+.show-output span{
+  display: block;
+  margin-block: 8px;
+  font-size: 17px;
+}
+
+.show-output p{
+  font-size: 17px;
+  margin-bottom: 22px;
+  margin-top: 5px;
+}
+
+.show-output .example
+{
+  padding-left: 16px;
+  border-left: 5px solid #77d777;
+}
+
+.wordVoice{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.wordVoice audio{
+  opacity: 0;
+}
